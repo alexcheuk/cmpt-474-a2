@@ -52,8 +52,8 @@ def getKeys(file):
 
 keys = getKeys('credentials.csv')
 region = 'us-west-2'
-queue_name = None
-bucket_name = None
+queue_name = "Q"
+bucket_name = "cmpt474-alexcheuk-bucket"
 
 if not queue_name: raise Exception('You must set a queue name.')
 if not bucket_name: raise Exception('You must set a bucket name.')
