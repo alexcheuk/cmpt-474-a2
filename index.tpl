@@ -3,6 +3,7 @@
 <head>
 	<title>Justin's Little Boy Uploader</title>
 	<link rel="stylesheet" type="text/css" href="/static/assets/style.css">
+	<link rel="stylesheet" type="text/css" href="/static/assets/dz-basic.css">
 </head>
 <body>
 
