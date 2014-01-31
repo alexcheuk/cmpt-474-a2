@@ -13,7 +13,7 @@ sizes = {
 
 # Generate a unique id to be used in an S3 bucket.
 def generate_id():
-	raise Exception('Implement me!')
+	return str(uuid.uuid4())
 
 
 # Write a message to SQS containing enough information to 
