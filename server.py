@@ -1,6 +1,6 @@
 import string
 from PIL import Image
-from bottle import route, request, run
+from bottle import route, request, run, template
 from boto.s3.key import Key
 from common import bucket, queue
 
@@ -26,6 +26,10 @@ def notify_worker(id, sizes):
 def url(name):
 	return Key(bucket, name).generate_url(expires_in=-1,query_auth=False)
 
+
+@route('/', method='GET')
+def main():
+	return template('index')
 
 # Executed when you curl -XPOST http://your-instance.com/
 @route('/', method='POST')
