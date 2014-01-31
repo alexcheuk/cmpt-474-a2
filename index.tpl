@@ -8,7 +8,7 @@
 <body>
 
 <div id="dropzone" class="dropzone">
-	DROP FILE IN HERE
+
 </div>
 
 <script type="text/javascript" src="/static/assets/dropzone.js"></script>

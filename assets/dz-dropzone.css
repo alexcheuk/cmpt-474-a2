@@ -219,7 +219,7 @@
 }
 
 .dropzone .dz-default.dz-message span {
-    display: none;
+    /*display: none;*/
 }
 
 .dropzone.dz-square .dz-default.dz-message {
