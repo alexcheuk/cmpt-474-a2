@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<div id="dropzone">
+<div id="dropzone" class="dropzone">
 	DROP FILE IN HERE
 </div>
 
