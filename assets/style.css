@@ -1,9 +1,14 @@
+body{
+	font-size:12px;
+	font-family: Arial
+}
 #dropzone{
+	color:#333;
 	width:300px;
 	height:150px;
-	background:#eee;
-	border:1px solid #ddd;
-	line-height: 300px;
+	background:#ddd;
+	border:1px solid #aaa;
+	line-height: 150px;
 	text-align:center;
-	margin:20px auto;
+	margin:50px auto;
 }
