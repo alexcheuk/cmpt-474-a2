@@ -1,6 +1,6 @@
 import string
 from PIL import Image
-from bottle import route, request, run, template
+from bottle import route, request, run, template, static_file
 from boto.s3.key import Key
 from common import bucket, queue
 
@@ -26,6 +26,9 @@ def notify_worker(id, sizes):
 def url(name):
 	return Key(bucket, name).generate_url(expires_in=-1,query_auth=False)
 
+@route('/static/<filename>', method='GET')
+	def static_files(filename):
+		return static_file(filename, root='/var/www/cmpt-474-a2')
 
 @route('/', method='GET')
 def main():

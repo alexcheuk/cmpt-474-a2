@@ -7,7 +7,7 @@
 
 <div id="dropzone"></div>
 
-<script type="text/javascript" src="assets/dropzone.js"></script>
-<script src="assets/scipt.js"></script>
+<script type="text/javascript" src="/static/assets/dropzone.js"></script>
+<script src="/static/assets/scipt.js"></script>
 </body>
 </html>
