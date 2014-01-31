@@ -1,15 +1,62 @@
 body{
+	color:#666;
 	font-size:12px;
-	font-family: Arial
+	font-family: 'Open Sans', Arial;
+	background:#ecf0f1;
+}
+
+.wrapper{
+	width:920px;
+	margin:0 auto;
+}
+
+h1{
+	text-align: center;
+	margin-top:40px;
+	color:#bdc3c7;
+}
+
+h2{
+	text-align: left;
+	font-size:14px;
+	color:#bdc3c7;
 }
 
 #dropzone{
-	color:#333;
-	width:800px;
 	min-height:150px;
-	background:#ddd;
+	background:#34495e url(pony.png) no-repeat right;
+	color:#333;
 	border:1px solid #aaa;
 
 	text-align:center;
 	margin:50px auto;
+
+	border: 4px dashed #999;
+}
+
+.dropzone .dz-default.dz-message span {
+	line-height: 120px;
+	color:#fff;
+	text-transform: uppercase;
+	font-size:14px;
+	font-weight: bold;
+}
+
+#response{
+	background:#fff;
+	border:1px solid #ccc;
+
+	color: #333;
+	padding:10px;
+
+	overflow:auto;
+}
+
+.footer{
+	font-size:11px;
+	color:#666;
+	position: fixed;
+	bottom:10px;
+	text-align: center;
+	width:100%;
 }

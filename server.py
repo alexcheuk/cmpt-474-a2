@@ -1,4 +1,5 @@
 import string
+import uuid
 from PIL import Image
 from bottle import route, request, run, template, static_file
 from boto.s3.key import Key
@@ -19,7 +20,8 @@ def generate_id():
 # Write a message to SQS containing enough information to 
 # create all the necessary thumbnails from a worker.
 def notify_worker(id, sizes):
-	raise Exception('Implement me!')	
+	# raise Exception('Implement me!')	
+	return
 
 
 # Generate a URL for a resource in an S3 bucket
