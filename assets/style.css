@@ -24,7 +24,7 @@ h2{
 
 #dropzone{
 	min-height:150px;
-	background:#34495e url(pony.png) no-repeat right;
+	background:#34495e url(pony.png) no-repeat right bottom;
 	color:#333;
 	border:1px solid #aaa;
 
