@@ -54,7 +54,6 @@ try:
 	
 	# Loop forever.
 	while 1:
-	while 1:
 		newMessage = queue.read()
 		if newMessage != None:
 			
