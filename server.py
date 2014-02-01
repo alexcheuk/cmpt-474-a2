@@ -3,7 +3,9 @@ import uuid
 from PIL import Image
 from bottle import route, request, run, template, static_file
 from boto.s3.key import Key
+from boto.sqs.message import Message
 from common import bucket, queue
+import json
 
 # All the sizes our app supports
 sizes = { 
@@ -21,6 +23,19 @@ def generate_id():
 # create all the necessary thumbnails from a worker.
 def notify_worker(id, sizes):
 	# raise Exception('Implement me!')	
+	sqsMessage = Message()
+
+	jsonMessage = {
+		"id" : id,
+		"sizes" : sizes
+	}
+
+	sqsMessage.set_body(json.dumps(jsonMessage))
+
+	status = queue.write(sqsMessage)
+
+	print "hello"
+
 	return
 
 
