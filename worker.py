@@ -2,6 +2,8 @@ import json
 import time
 import StringIO
 from PIL import Image
+from boto.s3.key import Key
+from boto.sqs.message import Message
 from common import bucket, queue
 
 # Create a thumbnail from an image.
@@ -52,7 +54,19 @@ try:
 	
 	# Loop forever.
 	while 1:
-		
+		newMessage = queue.read()
+		if newMessage != None:
+			#debugging
+			print newMessage.get_body()
+			obj = json.loads(newMessage.get_body())
+			#returns an error since id has original in bucket
+			newImage = read(obj['id']+'-original')
+			resizedSmall = thumbnail(newImage, obj['sizes']['small']['width'], obj['sizes']['small']['height'])
+			write(obj['id']+'_small', resizedSmall, 'PNG')
+			resizedMedium = thumbnail(newImage, obj['sizes']['medium']['width'], obj['sizes']['medium']['height'])
+			write(obj['id']+'_medium', resizedMedium, 'PNG')
+			resizedLarge = thumbnail(newImage, obj['sizes']['large']['width'], obj['sizes']['large']['height'])
+			write(obj['id']+'_large', resizedLarge, 'PNG')
 		# Read a message from the queue containing the key of
 		# the image to be resized, use read() to read the image.
 		# For every size of image to generated, call thumbnail()
