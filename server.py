@@ -49,7 +49,7 @@ def static_files(filename):
 
 @route('/', method='GET')
 def main():
-	return template('index')
+	return template('/var/www/cmpt-474-a2/index.tpl')
 
 # Executed when you curl -XPOST http://your-instance.com/
 @route('/', method='POST')
