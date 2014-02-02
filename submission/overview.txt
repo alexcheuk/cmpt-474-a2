@@ -1,0 +1,24 @@
+What does the Amazon SLA mean you can expect from your app?
+	It means our application will guaratenee the uptime specified in Amazon's SLA
+
+How does or doesn’t your ID generation algorithm prevent conflicts?
+	Our application's ID generation algorithm prevents conflicts by appending a unique ID generated using UUIDv4. UUID is proven to be univsersally unique. "Generating 1 billion UUIDs every second for the next 100 years, the probability of creating just one duplicate would be about 50%" - Wikipedia
+
+What platform-level, cluster-level, and application-level software is being used in your app?
+
+How does your app scale?
+	Our application scales by closely watching its CPU utilization percentage. Once it reaches an upper threshold of 70%, it will launch additional instances to distribute the work load.
+
+How might it fail? (Hint: server.py)
+	
+
+How could you change it to scale better?
+
+
+What other existing apps might use a similar platform? Why? (Hint: Video.)
+	Youtube might be using similar platforms. When a user submits a video, it can be of any size and format. Since YouTube offers the viewing of videos in different qualities, YouTube must compress each video submitted to lower qualities. For Example, a video submitted in 1080p must be resize to be 720p, 360, 240 ...
+
+What metric did you chose for your AutoScaler/CloudWatch alarm? Why?
+
+
+If a worker fails while encoding an image, what happens? Can your system recover?
