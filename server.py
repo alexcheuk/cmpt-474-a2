@@ -91,6 +91,7 @@ def upload():
 
 	# Finally load the image data into S3.
 	key.set_contents_from_file(file)
+	key.make_public()
 
 	# Send a message to a worker to begin processing the resizing
 	# of the freshly minted image.
