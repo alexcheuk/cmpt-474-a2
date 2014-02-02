@@ -50,7 +50,7 @@ def getKeys(file):
 			}
 
 
-keys = getKeys('credentials.csv')
+keys = getKeys('/var/www/cmpt-474-a2/credentials.csv')
 region = 'us-west-2'
 queue_name = "Q"
 bucket_name = "cmpt474-alexcheuk-bucket"
