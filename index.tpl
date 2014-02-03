@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Justin's Little Boy Uploader</title>
+	<title>FRIENDSHIP IS IMAGE-IC</title>
 	<link rel="stylesheet" type="text/css" href="/static/assets/dz-dropzone.css">
 	<link rel="stylesheet" type="text/css" href="/static/assets/style.css">
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
